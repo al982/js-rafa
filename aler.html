@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aler</title>
+</head>
+<body>
+    <script>
+        const masuk = confirm("Apakah anda mau masuk?");
+
+        if (masuk) {
+            const nama = prompt("siapkan nama anda");
+            const nilai = prompt("siapkan nilai anda");
+            alert(`Hello ${nama}`);
+            alert(`Nilai anda ${nilai}`);
+
+        if (nilai >= 90 ) {
+            document.write("<p>Sangat Konpeten</p>");
+        } else if (nilai >= 80) {
+            document.write("<p>Kompeten</p>");
+        } else if (nilai >= 70) {
+            document.write("<p>Cukup Kompeten</p>");
+        } else if (nilai >= 0) {
+            document.write("<p>Kurang Kompeten</p>");
+        } else {
+            alert("Bye Bye");
+        }
+    }
+    </script>
+</body>
+</html>
+

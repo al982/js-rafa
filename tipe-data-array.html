@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data array</title>
+</head>
+<body>
+    <script>
+        let arraykosong = [];
+
+        let arrayname = ["muhammad", "alghazali", "mubarok"];
+
+        // Perbaikan: Ganti 'name' menjadi 'names' agar konsisten dan selesaikan ReferenceError
+        
+        const names = []; 
+        
+        // Perbaikan: Sintaks yang benar untuk memanggil metode push
+        
+        names.push("muhammad"); 
+        
+        // Perbaikan: Sintaks yang benar untuk memanggil metode push
+        
+        names.push("alghazali", "mubarok"); 
+        
+        // Perbaikan: Sintaks yang benar untuk memanggil metode push
+        
+        names.push("yanti", "yanto", "anton");
+
+        console.table(names);
+
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+
+        names[0] = "banyak baca buku";
+        names[1] = "hafiz qur'an";
+        names[2] = "orang iqis";
+
+        console.table(names);
+        
+        // Perbaikan: Ganti 'delete name[3]' menjadi 'names.splice(3, 1)' untuk menghapus elemen tanpa meninggalkan empty slot
+        
+        names.splice(3, 1); 
+        
+        console.table(names);
+        
+        names.push("muhammad lagi");
+        
+        console.table(names);
+    </script>
+</body>
+</html>
