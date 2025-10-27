@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           let nilai1 = parseFloat(prompt("Masukkan nilai pertama: "));
+           let nilai2 = parseFloat(prompt("Masukkan nilai kedua: "));
+
+           let Pilihan = parseInt(prompt(
+          "=== Menu Kalkulator ===\n" +
+          "1. Persegi\n" +
+          "2. Segitiga\n"
+        ));
+
+        if (Pilihan === 1) {
+            let luasPersegi = nilai1 * nilai2;
+            alert(`Luas Persegi: ${luasPersegi}`);
+        } else if (Pilihan === 2) {
+            let luasSegitiga = 0.5 * nilai1 * nilai2;
+            alert(`Luas Segitiga: ${luasSegitiga}`);
+        } else {
+            alert("Operasi tidak dikenali.");
+        }
+     </script>   
+ </body>       
+</html>

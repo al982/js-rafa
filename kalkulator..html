@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+  <script>
+    function kalkulator() {
+      let choice;
+
+      do {
+        choice = parseInt(prompt(
+          "=== Menu Kalkulator ===\n" +
+          "1. Penjumlahan\n" +
+          "2. Pengurangan\n" +
+          "3. Perkalian\n" +
+          "4. Pembagian\n" +
+          "5. Faktorial\n" +
+          "6. Keluar\n" +
+          "Pilih operasi (1–6):"
+        ));
+
+        // Validasi input menu
+        while (isNaN(choice) || choice < 1 || choice > 6) {
+          choice = parseInt(prompt("Pilihan tidak valid! Masukkan angka 1–6:"));
+        }
+
+        if (choice >= 1 && choice <= 4) {
+          let num1 = parseFloat(prompt("Masukkan angka pertama:"));
+          let num2 = parseFloat(prompt("Masukkan angka kedua:"));
+
+          // Validasi pembagian dengan nol
+          while (choice === 4 && num2 === 0) {
+            num2 = parseFloat(prompt("Pembagi tidak boleh nol! Masukkan angka kedua lagi:"));
+          }
+
+          let result;
+          switch (choice) {
+            case 1:
+              result = num1 + num2;
+              alert(`Hasil Penjumlahan: ${result.toFixed(2)}`);
+              break;
+            case 2:
+              result = num1 - num2;
+              alert(`Hasil Pengurangan: ${result.toFixed(2)}`);
+              break;
+            case 3:
+              result = num1 * num2;
+              alert(`Hasil Perkalian: ${result.toFixed(2)}`);
+              break;
+            case 4:
+              result = num1 / num2;
+              alert(`Hasil Pembagian: ${result.toFixed(2)}`);
+              break;
+          }
+        } else if (choice === 5) {
+          let n = parseInt(prompt("Masukkan bilangan bulat non-negatif:"));
+          
+          while (isNaN(n) || n < 0) {
+            n = parseInt(prompt("Bilangan tidak boleh negatif! Masukkan lagi:"));
+          }
+
+          let faktorial = 1;
+          for (let i = 1; i <= n; i++) {
+            faktorial *= i;
+          }
+
+          alert(`Faktorial dari ${n} = ${faktorial}`);
+        }
+
+      } while (choice !== 6);
+
+      alert("Terima kasih!");
+    }
+
+    kalkulator();
+  </script>
+</body>
+</html>
